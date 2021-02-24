@@ -8,7 +8,7 @@ int main(int argc, char* argv[])
     initscr();
     noecho();
     keypad(stdscr,true);
-    mvaddstr(c,d,"ya dral tvoyu mat'");
+    mvaddstr(c,d,"v bogdade vse spokoino'");
     refresh();
     while((ch=getch())!='q')
     {
@@ -53,19 +53,33 @@ int main(int argc, char* argv[])
         musk[0][0]=c;
         musk[0][1]=d;
 
-        if(ch==KEY_RIGHT || ch==KEY_DOWN)
+        if(ch==KEY_DOWN)
         {
-        mvaddch(musk[3][0],musk[3][1],'d');
-        mvaddch(musk[2][0],musk[2][1],'i');
-        mvaddch(musk[1][0],musk[1][1],'c');
-        mvaddch(musk[0][0],musk[0][1],'k');
+        mvaddstr(musk[3][0],musk[3][1],"oo");
+        mvaddstr(musk[2][0],musk[2][1],"||");
+        mvaddstr(musk[1][0],musk[1][1],"||");
+        mvaddstr(musk[0][0],musk[0][1],"\\/");
         }
-        else if(ch==KEY_LEFT || ch==KEY_UP)
+        else if( ch==KEY_UP)
         {
-        mvaddch(musk[3][0],musk[3][1],'k');
-        mvaddch(musk[2][0],musk[2][1],'c');
-        mvaddch(musk[1][0],musk[1][1],'i');
-        mvaddch(musk[0][0],musk[0][1],'d');
+        mvaddstr(musk[3][0],musk[3][1],"oo");
+        mvaddstr(musk[2][0],musk[2][1],"||");
+        mvaddstr(musk[1][0],musk[1][1],"||");
+        mvaddstr(musk[0][0],musk[0][1],"/\\");
+        }
+        else if(ch==KEY_RIGHT)
+        {
+        mvaddstr(musk[3][0],musk[3][1],"8");
+        mvaddstr(musk[2][0],musk[2][1],"=");
+        mvaddstr(musk[1][0],musk[1][1],"=");
+        mvaddstr(musk[0][0],musk[0][1],">");
+        }
+        else if(ch==KEY_LEFT)
+        {
+        mvaddstr(musk[3][0],musk[3][1],"8");
+        mvaddstr(musk[2][0],musk[2][1],"=");
+        mvaddstr(musk[1][0],musk[1][1],"=");
+        mvaddstr(musk[0][0],musk[0][1],"<");
         }
         
         
